@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { MagnifyingGlassIcon, ShoppingCartIcon, MenuIcon  } from "@heroicons/react/20/solid";
+import { MagnifyingGlassIcon, ShoppingCartIcon, Bars3Icon } from "@heroicons/react/20/solid";
 
 function Header() {
   return (
@@ -39,13 +39,19 @@ function Header() {
         </div>
       </div>
 
-
-
       {/* bottom nav */}
-      <div >
+      <div className="flex items-center space-x-3 p-2 pl-6 bg-amazon_blue-light text-white text-sm">
         <p className="link flex items-center">
-          <MenuIcon className="h-6" />
+          <Bars3Icon  className="h-6" />
           All</p>
+        <p className="link">Prime Video</p>
+        <p className="link">Amazon Business</p>
+        <p className="link">Today's Deals</p>
+        <p className="link hidden lg:inline-flex">Electronics</p>
+        <p className="link hidden lg:inline-flex">Food & Grocery</p>
+        <p className="link hidden lg:inline-flex">Buy Again</p>
+        <p className="link hidden lg:inline-flex">Shopper ToolKit</p>
+        <p className="link hidden lg:inline-flex">Health & Personal Care</p>
       </div>
     </header>
   );
