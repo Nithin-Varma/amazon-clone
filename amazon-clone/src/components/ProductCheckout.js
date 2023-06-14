@@ -5,7 +5,7 @@ import Currency from "react-currency-formatter";
 import { useDispatch } from 'react-redux';
 import { addToBasket, removeFromBasket } from '../slices/basketSlice';
 
-function ProductCheckout({ id, title, price, description, category, image, hasPrime, }) {
+function ProductCheckout({ id, title, rating, price, description, category, image, hasPrime, }) {
 
     const dispatch = useDispatch();
     const addItemtoBasket = () => {
@@ -28,7 +28,6 @@ function ProductCheckout({ id, title, price, description, category, image, hasPr
 
   return (
     <div className='grid grid-cols-5'>
-        <h1>nithin varma </h1>
         <Image 
           src={image}
           height={200}
@@ -56,13 +55,13 @@ function ProductCheckout({ id, title, price, description, category, image, hasPr
                     <p className='text-xs text-gray-500'>Free Delivery</p>
                 </div>
             )}
+
+            
         </div>
 
         <div className='flex flex-col space-y-2 my-auto justify-self-end'>
-            <button className='button mt-auto' onClick={addItemtoBasket}> Add to Cart</button>
-            <button className='button mt-auto' onClick={removeItemFromBasket}> Remove from the Cart</button>
-
-
+                <button className='button mt-auto' onClick={addItemtoBasket}> Add to Cart</button>
+                <button className='button mt-auto' onClick={removeItemFromBasket}> Remove from the Cart</button>
         </div>
 
       
